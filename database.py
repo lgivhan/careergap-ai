@@ -22,7 +22,6 @@ def save_analysis(analysis):
     if not client:
         return
     
-    # This dictionary exactly matches the columns in your screenshot for 'job_analyses'
     data = {
         "job_title": analysis.job_title,
         "company_name": analysis.company_name,
@@ -34,7 +33,6 @@ def save_analysis(analysis):
     }
     
     try:
-        # UPDATED: Pointing to the table with match_score and explanation
         response = client.table("job_analyses").insert(data).execute()
         print("✅ SUCCESS: Analysis saved to job_analyses table!")
         return response
@@ -45,7 +43,6 @@ if __name__ == "__main__":
     client = get_db()
     if client:
         try:
-            # UPDATED: Health check now targets the correct table
             client.table("job_analyses").select("*").limit(1).execute()
             print("✅ CONNECTION SUCCESSFUL: Ready to log job analyses.")
         except Exception as e:
