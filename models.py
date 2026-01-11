@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 
 class GapAnalysis(BaseModel):
     """The structured result of the AI's resume-to-job comparison."""
@@ -9,3 +9,4 @@ class GapAnalysis(BaseModel):
     missing_skills: List[str] = Field(description="Technical skills in JD but not resume.")
     recommended_project: str = Field(description="A specific, actionable project to bridge the gap.")
     explanation: str = Field(description="A short 2-sentence summary of the match logic.")
+    source_url: Optional[str] = None

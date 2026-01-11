@@ -1,13 +1,13 @@
 import sys
 
 def get_job_details():
-    """Single source of truth for capturing job data via terminal."""
     print("\n" + "═"*50)
     print(" 🚀 CAREERGAP AI: JOB INPUT")
     print("="*50)
     
     company = input("🏢 Company Name: ")
     title = input("💼 Job Title: ")
+    url = input("🔗 Job Posting URL: ")
     
     print("\n📝 Paste the Job Description & Requirements below.")
     print("👉 (When done: Press Enter, then Ctrl-D on Mac or Ctrl-Z on Win)")
@@ -18,5 +18,6 @@ def get_job_details():
     return {
         "company": company,
         "title": title,
+        "url": url,
         "description": jd_body.strip()
     }

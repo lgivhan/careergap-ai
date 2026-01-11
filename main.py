@@ -1,18 +1,17 @@
 import sys
 from pdf_parser import extract_resume_text
-from ingestion import get_job_details  # <--- Import the logic here!
+from ingestion import get_job_details
 from analyzer import analyze_gap
-from database import save_analysis # Assuming you've created this
+from database import save_analysis
 
 if __name__ == "__main__":
-    # 1. GATHER DATA
-    # Uses the functions imported from your other files
+    # 1. GATHER
     resume_text = extract_resume_text("my_resume.pdf")
     job_data = get_job_details()
     
     if resume_text and job_data['description']:
-        # 2. ANALYZE DATA
-        report = analyze_gap(resume_text, job_data['description'])
+        # 2. ANALYZE
+        report = analyze_gap(resume_text, job_data['description'], job_data['url'])
         
         # 3. DISPLAY RESULTS
         print("\n" + "📊" * 15)
