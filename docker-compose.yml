@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    volumes:
+      # This allows the app to read your local resume without baking it into the image
+      - ./my_resume.pdf:/app/my_resume.pdf
+    stdin_open: true # Allows terminal input (for get_job_details)
+    tty: true        # Required for interactive input
