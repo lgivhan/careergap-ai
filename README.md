@@ -50,10 +50,13 @@ The setup script provides a central menu for all application features:
 2. **View History:** `python history.py [company_name]` for specific company or just `python history.py` to return all.
 3. **Generate Strategy:** `python aggregate_analysis.py`
 
+## 🤖 Development Notes
+This project was developed using an "AI-Pair Programming" workflow with Google Gemini. AI was leveraged for rapid prototyping of Pydantic schemas, architecting the Docker containerization, and documenting the system's data flow.
+
 ## 🛠 Challenges & Solutions
 * **Non-Deterministic Output:** Resolved LLM consistency issues by binding Pydantic models to the output chain, ensuring valid JSON every time.
 * **PII Exposure:** Remediated an initial tracking of personal data by performing a deep Git history scrub using `git-filter-repo` and establishing strict environment controls.
 * **API Quota Management:** Optimized token usage by selecting the `gpt-4o-mini` model and implementing local caching strategies during development.
 
 ---
-*Created by Lee Givhan — Software Engineer to gain experience with AI, Data Validation, and Reliable Systems.*
+*Created by Lee Givhan — Exploring reliable AI systems and structured data pipelines.*
