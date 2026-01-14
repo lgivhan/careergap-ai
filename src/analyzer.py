@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from models import GapAnalysis
+from src.models import GapAnalysis
 
 load_dotenv()
 

@@ -3,7 +3,7 @@ from collections import Counter
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from database import get_db
+from src.database import get_db
 
 load_dotenv()
 

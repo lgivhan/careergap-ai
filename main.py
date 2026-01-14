@@ -1,8 +1,8 @@
 import sys
 from pdf_parser import extract_resume_text
-from ingestion import get_job_details
-from analyzer import analyze_gap
-from database import save_analysis
+from src.ingestion import get_job_details
+from src.analyzer import analyze_gap
+from src.database import save_analysis
 
 if __name__ == "__main__":
     # 1. GATHER

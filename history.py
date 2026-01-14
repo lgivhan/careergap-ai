@@ -1,4 +1,4 @@
-from database import get_db
+from src.database import get_db
 
 def search_history(query=None, limit=5):
     client = get_db()
