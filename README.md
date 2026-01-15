@@ -2,7 +2,7 @@
 
 **CareerGap AI** is a modular Python-based auditing tool designed to automate the cross-referencing of resumes against job descriptions. It leverages LLMs and strict schema validation to identify technical skill gaps, recommend targeted resume projects, and persist career analytics to a cloud database.
 
-<img src="assets/running-main-program.gif" alt="Running the main program" width="600">
+<img src="assets/main-program-screenshot.png" alt="Screenshot of main programs output" width="600">
 
 ## 🏗 Architecture & Core Principles
 This project was built with a focus on **Data Integrity** and **PII Safety**, reflecting a transition from enterprise TypeScript development into AI Orchestration and Data Engineering.
@@ -47,6 +47,7 @@ The setup script provides a central menu for all application features:
 
 ### Running Scripts Directly (Optional)
 1. **Run Analysis:** `python main.py`
+<img src="assets/running-main-program.gif" alt="Running the main program" width="600">
 2. **View History:** `python history.py [company_name]` for specific company or just `python history.py` to return all.
 3. **Generate Strategy:** `python aggregate_analysis.py`
 
