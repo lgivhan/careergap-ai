@@ -46,10 +46,13 @@ The setup script provides a central menu for all application features:
 ```
 
 ### Running Scripts Directly (Optional)
-1. **Run Analysis:** `python main.py`
-<img src="assets/running-main-program.gif" alt="Running the main program" width="600">
+1. **Run Analysis:** `python main.py`  
+   <img src="assets/running-main-program.gif" alt="Running the main program" width="600">
+
 2. **View History:** `python history.py [company_name]` for specific company or just `python history.py` to return all.
+
 3. **Generate Strategy:** `python aggregate_analysis.py`
+
 
 ## 🤖 Development Notes
 This project was developed using an "AI-Pair Programming" workflow with Google Gemini. AI was leveraged for rapid prototyping of Pydantic schemas, architecting the Docker containerization, and documenting the system's data flow.
