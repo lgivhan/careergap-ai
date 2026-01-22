@@ -22,7 +22,16 @@ def save_analysis(analysis):
     if not client:
         return
     
+    # GUARD CLAUSE - Get current user before building the payload
+    user_response = client.auth.get_user()
+    if not user_response.user:
+        print("❌ AUTH ERROR: No logged-in user found. RLS will block this insert.")
+        return
+    
+    user_id = user_response.user.id
+
     data = {
+        "user_id": user_id,
         "job_title": analysis.job_title,
         "company_name": analysis.company_name,
         "match_score": analysis.match_score,
